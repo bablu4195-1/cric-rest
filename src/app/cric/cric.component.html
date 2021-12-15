@@ -1,0 +1,45 @@
+<nav class="navbar">
+    <label>Search tournament :</label>
+    <input  class="searchKey" type="search" placeholder="Search Name" [(ngModel)]="searchKey" (ngModelChange)="Search()">
+    <div class="form-group">
+        <strong>Category</strong> :
+        <select class="form-control" aria-label="select"
+        [(ngModel)]="gender">
+        <option values="names"></option>
+        <option value="men">Men</option>
+        <option value="women">Women</option>
+    </select>
+</div>  
+</nav>
+<table mat-table>
+    <thead>
+        <tr>
+            <th>Start date</th>
+            <th>Name</th>
+            <th>Tournament key</th>
+            <th>Gender</th>
+            <th>Series duration</th>
+            <th>Last scheduled match</th>
+            <th>Last scheduled match date time</th>
+            <th>Updated time</th>
+            <!-- <th>type</th>
+            <th>code</th> -->
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let name of names | filter: searchKey | genderfilter: gender">
+            <td>{{name.start_date | date:"longDate" }}</td>
+            <td>{{name.name}}</td>
+            <td>{{name.tournament_key}}</td>
+            <td>{{name.gender}}</td>
+            <td>{{name.series_duration}}</td>
+            <td>{{name.last_scheduled_match_date | date}}</td>
+            <td>{{name.last_scheduled_match_date_display}}</td>
+            <td>{{name.updated_datetime | date}}</td>
+            <!-- <td>{{name.type}}</td>
+            <td>{{name.code}}</td> -->
+          </tr>
+    </tbody>
+   
+  </table>

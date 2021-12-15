@@ -1,0 +1,36 @@
+table {
+    border:1px solid black;
+    margin-top: 12px;
+  }
+th {
+    background-color: black;
+    color: white;
+  }
+tbody {
+    background-color: blanchedalmond;
+}
+
+input {
+    margin-bottom: 10px;
+}
+td {
+    border: 1px solid white;
+    padding: 10px
+}
+.utr {
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left:10px;
+    margin-right:10px;
+}
+.utr:hover {
+    background-color: blanchedalmond;
+}
+nav {
+    display: flex;
+}
+div {
+    margin-left: 20px;
+}
